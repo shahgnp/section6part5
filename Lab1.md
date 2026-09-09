@@ -35,6 +35,10 @@ spec:
 ## Verify
 
 ```bash
+k -n <yourname> get secrets
+k -n <yourname> get secrets -oyaml
+```
+```bash
 kubectl exec secret-demo -- printenv DB_USERNAME
 kubectl exec secret-demo -- printenv DB_PASSWORD
 ```
