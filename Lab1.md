@@ -4,8 +4,9 @@
 
 ## Create a secret
 
+```bash
 kubectl -n <shahgnp> create secret generic app-secret --from-literal=DB_USERNAME=appuser --from-literal=DB_PASSWORD=mypassword
-
+```
 ## Create a pod
 
 ```yaml
