@@ -37,6 +37,6 @@ spec:
 ## Verify
 
 ```bash
-kubectl -n demo exec secret-demo -- ls /mnt/secrets
-kubectl -n demo exec secret-demo -- cat /mnt/secrets/db-username
+kubectl -n demo exec secret-demo-<yourname> -- ls /mnt/secrets
+kubectl -n demo exec secret-demo-<yourname> -- cat /mnt/secrets/db-username
 ```
