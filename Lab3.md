@@ -9,6 +9,16 @@
 kubectl -n <yourname> create configmap app-config --from-literal=APP_ENV=production --from-literal=LOG_LEVEL=info --dry-run=client -oyaml >> configmap.yaml
 ```
 
+Read the file
+```bash
+cat configmap.yaml
+```
+
+Apply
+```bash
+k apply -f configmap.yaml
+```
+
 ## Create a pod
 
 ```yaml
@@ -39,5 +49,6 @@ kubectl -n <yourname> exec configmap-demo -- ls -l /etc/app-config
 ```
 
 ```bash
-kubectl -n <yourname> exec configmap-demo -- cat /etc/app-config
+kubectl -n <yourname> exec configmap-demo -- cat /etc/app-config/LOG_LEVEL
+kubectl -n <yourname> exec configmap-demo -- cat /etc/app-config/APP_ENV
 ```
